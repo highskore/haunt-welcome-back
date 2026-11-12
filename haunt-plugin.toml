@@ -1,0 +1,29 @@
+[plugin]
+id = "dev.haunt.welcome-back"
+name = "Welcome back"
+description = "What your agents did while you were away, waiting for you when you're back"
+version = "0.1.0"
+api = "0.5"
+entry = "target/wasm32-wasip2/release/haunt_plugin.wasm"
+license = "MIT"
+
+[capabilities]
+# When you step away and come back.
+away = true
+# The waiting command in the sheet, "git push?".
+event_details = true
+events = ["agent.session-start", "agent.prompt", "agent.task", "agent.subagent", "agent.tool", "agent.permission-request", "agent.question", "agent.stop", "agent.unknown"]
+panel = true
+
+[settings]
+sheet = { type = "bool", default = true, description = "Show \"While you were away\" when you come back" }
+min_away_min = { type = "integer", default = 20, description = "Minutes away before the sheet shows" }
+finished = { type = "bool", default = true, description = "Turns that finished" }
+failed = { type = "bool", default = true, description = "Turns that failed" }
+waiting = { type = "bool", default = true, description = "Approvals and questions an agent asked you" }
+tasks = { type = "bool", default = true, description = "Tasks added and completed" }
+sessions = { type = "bool", default = true, description = "New agent sessions" }
+per_session = { type = "bool", default = true, description = "One summary line per session" }
+timeline = { type = "bool", default = true, description = "Every event, newest first, under the summaries" }
+unverified = { type = "bool", default = false, description = "Also count events that came without the tab's nonce, which anything in the terminal can forge" }
+keep_days = { type = "integer", default = 7, description = "Days of history to keep" }
