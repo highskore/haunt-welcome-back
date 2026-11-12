@@ -1,6 +1,17 @@
-# haunt-welcome-back
+<div align="center">
 
-What your agents did while you were away, waiting for you when you're back. A first-party Haunt plugin (`dev.haunt.welcome-back`).
+<img src="docs/icon.png" width="96" alt="">
+
+# Welcome back
+
+**What your agents did while you were away, waiting for you when you're back.**
+
+[![Haunt plugin](https://img.shields.io/badge/Haunt-plugin-D97757)](https://github.com/highskore/haunt-hackathon)
+![Plugin API 0.5](https://img.shields.io/badge/plugin%20API-0.5-111)
+![WASM component](https://img.shields.io/badge/WASM-component-654ff0?logo=webassembly&logoColor=white)
+![MIT licence](https://img.shields.io/badge/licence-MIT-6b7280)
+
+</div>
 
 ## The sheet
 
